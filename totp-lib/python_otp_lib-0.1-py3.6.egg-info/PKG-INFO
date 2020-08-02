@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: python-otp-lib
+Version: 0.1
+Summary: A simple library that performs HOTP and TOTP token generation.
+Home-page: https://github.com/mcaimi/python-otp-lib.git
+Author: Marco Caimi
+Author-email: mcaimi@redhat.com
+License: GPL v3
+Description: UNKNOWN
+Platform: UNKNOWN
