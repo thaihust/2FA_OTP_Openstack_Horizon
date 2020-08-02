@@ -36,7 +36,7 @@ def qr(request, token_seed=None, html_encode=True):
     stream = StringIO(byteImg)
     image = Image.open(stream).convert("RGBA")
     stream.close()
-    image.save('/opt/stack/horizon/openstack_dashboard/dashboards/otp.png')
+    image.save('./otp.png')
     # return QRCode
     if html_encode:
         return HttpResponse(img, content_type="image/png")
