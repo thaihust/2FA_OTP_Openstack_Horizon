@@ -30,7 +30,7 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 
 * Devstack:
 	* ```mkdir -p /opt/stack/horizon/openstack_dashboard/auth```
-	* ```devstack: cp -v 2fa_auth_plugin/* /opt/stack/horizon/openstack_dashboard/auth/```
+	* ```cp -v 2fa_auth_plugin/* /opt/stack/horizon/openstack_dashboard/auth/```
 
 
 ### Configure Django Settings
