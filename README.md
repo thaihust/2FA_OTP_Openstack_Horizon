@@ -8,8 +8,8 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 ### Install qrcode lib:
 ```sudo pip install qrcode[pil]```
 ### Clone from github
-```git clone [https://github.com/phamngocsonls/2FA_OTP_Openstack_Horizon]```
-```cd 2FA_OTP_Openstack_Horizon/topt-lib```
+* ```git clone [https://github.com/phamngocsonls/2FA_OTP_Openstack_Horizon]```
+* ```cd 2FA_OTP_Openstack_Horizon/topt-lib```
 ### Copy lib
 ```sudo cp -r * /usr/lib/python2.7/```
 
@@ -20,8 +20,7 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 ```cp -rv 2fa_dashboard_plugin/totp /usr/share/openstack-dashboard/openstack_dashboard/dashboards/identity/```
 
 * Devstack
-```cp -rv 2fa_dashboard_plugin/totp```
-```/opt/stack/horizon/openstack_dashboard/dashboards/identity/```
+```cp -rv 2fa_dashboard_plugin/totp /opt/stack/horizon/openstack_dashboard/dashboards/identity/```
 
 ### Next the actual auth backend must be put in place:
 * Openstack
@@ -37,7 +36,8 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 
 On all horizon nodes, edit /usr/share/openstack-dashboard/openstack_dashboard/settings.py and set this parameters to change the authentication python class used by django:
 Find and remove ```AUTHENTICATION_BACKENDS```
-* Openstack add
+* Openstack add:
+
 TOTP_DEBUG = False
 TOTP_VALIDITY_PERIOD = 30
 AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)
