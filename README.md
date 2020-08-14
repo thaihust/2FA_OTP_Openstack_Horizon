@@ -25,12 +25,12 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 
 ### Next the actual auth backend must be put in place:
 * Openstack:
- ```mkdir -p /usr/share/openstack-dashboard/openstack_dashboard/auth```
- ```cp -v 2fa_auth_plugin/* /usr/share/openstack-dashboard/openstack_dashboard/auth/```
+	* ```mkdir -p /usr/share/openstack-dashboard/openstack_dashboard/auth```
+	* ```cp -v 2fa_auth_plugin/* /usr/share/openstack-dashboard/openstack_dashboard/auth/```
 
 * Devstack:
-```mkdir -p /opt/stack/horizon/openstack_dashboard/auth```
-```devstack: cp -v 2fa_auth_plugin/* /opt/stack/horizon/openstack_dashboard/auth/```
+	* ```mkdir -p /opt/stack/horizon/openstack_dashboard/auth```
+	* ```devstack: cp -v 2fa_auth_plugin/* /opt/stack/horizon/openstack_dashboard/auth/```
 
 
 ### Configure Django Settings
