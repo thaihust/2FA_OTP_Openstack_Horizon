@@ -1,4 +1,5 @@
 
+
 # 2FA_OTP_Openstack_Horizon
 2FA_OTP login for Openstack Horizon
 Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
@@ -38,9 +39,9 @@ On all horizon nodes, edit /usr/share/openstack-dashboard/openstack_dashboard/se
 Find and remove ```AUTHENTICATION_BACKENDS```
 * Openstack add:
 
-* ```TOTP_DEBUG = False```
-* ```TOTP_VALIDITY_PERIOD = 30```
-* ```AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
+	```TOTP_DEBUG = False```
+	```TOTP_VALIDITY_PERIOD = 30```
+	```AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
 
 
 * Devstack :
@@ -48,9 +49,9 @@ Find and remove ```AUTHENTICATION_BACKENDS```
 find AUTHENTICATION_BACKENDS and remove it.
 add:
 
-* ```TOTP_DEBUG = False```
-* ```TOTP_VALIDITY_PERIOD = 30```
-* ```AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
+	```TOTP_DEBUG = False```
+	```TOTP_VALIDITY_PERIOD = 30```
+	```AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
   
 ### Enable the newly installed dashboard
 
