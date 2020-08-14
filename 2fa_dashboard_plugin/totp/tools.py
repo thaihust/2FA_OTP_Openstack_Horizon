@@ -32,11 +32,6 @@ def qr(request, token_seed=None, html_encode=True):
     img = StringIO()
     qrCodeImage.save(img)
     img.seek(0)
-    byteImg = img.read()
-    stream = StringIO(byteImg)
-    image = Image.open(stream).convert("RGBA")
-    stream.close()
-    image.save('./otp.png')
     # return QRCode
     if html_encode:
         return HttpResponse(img, content_type="image/png")

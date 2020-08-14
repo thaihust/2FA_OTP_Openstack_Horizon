@@ -36,8 +36,6 @@ class ActivateLink(tables.LinkAction):
     def allowed(self, request, datum):
         has_email_set = TOTPOracle(auth_url=get_auth_url(), user_data=request.user).user_get_email_address(request.user.id)
 
-        if (self.table.data or (has_email_set == "None" or has_email_set is None)) and not DEBUG:
-            return False
         return True
 
 class RegenerateQRCode(tables.LinkAction):
@@ -50,11 +48,7 @@ class RegenerateQRCode(tables.LinkAction):
     def allowed(self, request, datum):
         has_email_set = TOTPOracle(auth_url=get_auth_url(), user_data=request.user).user_get_email_address(request.user.id)
         has_token_set = TOTPOracle(auth_url=get_auth_url(), user_data=request.user).user_get_totp_key(request.user.id)
-
-        if ((has_email_set == "None" or has_email_set is None) or (has_token_set == "None" or has_token_set is None)) and not DEBUG:
-            return False
         return True
-
 
 # deactivate totp button link handler
 class DeactivateLink(tables.DeleteAction):
