@@ -10,9 +10,9 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 ```sudo pip install qrcode[pil]```
 ### Clone from github
 * ```git clone https://github.com/phamngocsonls/2FA_OTP_Openstack_Horizon```
-* ```cd 2FA_OTP_Openstack_Horizon/totp-lib/```
+* ```cd 2FA_OTP_Openstack_Horizon```
 ### Copy lib
-```sudo cp -r * /usr/lib/python2.7/```
+```sudo cp -r totp-lib/* /usr/lib/python2.7/```
 
   
 
