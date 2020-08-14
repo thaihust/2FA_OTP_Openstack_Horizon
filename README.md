@@ -67,15 +67,15 @@ Lastly, enable the dashboard:
 ```sudo systemctl restart apache2```
 
   
-### OTP config:
+### How to use?:
 
-- 1st, you must config mail for account (this is bug)
+- Go to Identity / Two Factor Authentication
 
-- Go to Idenity/Two Factor Authentication and click “Activate TOTP Token” to create new OTP. But otp qr image created in ./otp.ong (may be _opt_stack/horizon/opt.png). User can config at /2fa_dashboard_plugin/totp/tools.py
+- Click on "Activate TOTP Token"
 
 - Scan qrcode and sunmit token
 
-- Logout and login with acc = acc ; password = password + otp
+- Logout and login with User Name = username ; Password = password + otp
 
 
 
