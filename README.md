@@ -24,12 +24,12 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 
 ### Next the actual auth backend must be put in place:
 * Openstack
-```mkdir -p /usr/share/openstack-dashboard/openstack_dashboard/auth```
-```cp -v 2fa_auth_plugin/* /usr/share/openstack-dashboard/openstack_dashboard/auth/```
+** ```mkdir -p /usr/share/openstack-dashboard/openstack_dashboard/auth```
+** ```cp -v 2fa_auth_plugin/* /usr/share/openstack-dashboard/openstack_dashboard/auth/```
 
-* Devstack: 
-```mkdir -p /opt/stack/horizon/openstack_dashboard/auth```
-```devstack: cp -v 2fa_auth_plugin/* /opt/stack/horizon/openstack_dashboard/auth/```
+* Devstack:
+** ```mkdir -p /opt/stack/horizon/openstack_dashboard/auth```
+** ```devstack: cp -v 2fa_auth_plugin/* /opt/stack/horizon/openstack_dashboard/auth/```
 
 
 ### Configure Django Settings
@@ -38,18 +38,19 @@ On all horizon nodes, edit /usr/share/openstack-dashboard/openstack_dashboard/se
 Find and remove ```AUTHENTICATION_BACKENDS```
 * Openstack add:
 
-TOTP_DEBUG = False
-TOTP_VALIDITY_PERIOD = 30
-AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)
+* ```TOTP_DEBUG = False```
+* ```TOTP_VALIDITY_PERIOD = 30```
+* ```AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
 
 
 * Devstack :
 ```vi /opt/stack/horizon/openstack_dashboard/settings.py```
 find AUTHENTICATION_BACKENDS and remove it.
-add
-``TOTP_DEBUG = False
-TOTP_VALIDITY_PERIOD = 30
-AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
+add:
+
+* ```TOTP_DEBUG = False```
+* ```TOTP_VALIDITY_PERIOD = 30```
+* ```AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
   
 ### Enable the newly installed dashboard
 
