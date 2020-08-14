@@ -38,10 +38,9 @@ Clone from: https://github.com/mcaimi/openstack-horizon-2factor-auth
 On all horizon nodes, edit /usr/share/openstack-dashboard/openstack_dashboard/settings.py and set this parameters to change the authentication python class used by django:
 Find and remove ```AUTHENTICATION_BACKENDS```
 * Openstack add
-
-```TOTP_DEBUG = False
+TOTP_DEBUG = False
 TOTP_VALIDITY_PERIOD = 30
-AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
+AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)
 
 
 * Devstack :
