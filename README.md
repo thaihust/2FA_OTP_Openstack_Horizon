@@ -39,7 +39,7 @@ On all horizon nodes, edit /usr/share/openstack-dashboard/openstack_dashboard/se
 Find and remove ```AUTHENTICATION_BACKENDS```
 * Openstack add
 
-``TOTP_DEBUG = False
+```TOTP_DEBUG = False
 TOTP_VALIDITY_PERIOD = 30
 AUTHENTICATION_BACKENDS =('openstack_dashboard.auth.backend.TwoFactorAuthBackend',)```
 
